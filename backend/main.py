@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers import regulations, maps, departments, validation
+from routers import agents
 
 app = FastAPI(
     title="ARIC — Agentic Regulatory Intelligence & Compliance",
@@ -20,11 +21,12 @@ app.include_router(regulations.router, prefix="/api/regulations", tags=["Regulat
 app.include_router(maps.router, prefix="/api/maps", tags=["MAPs"])
 app.include_router(departments.router, prefix="/api/departments", tags=["Departments"])
 app.include_router(validation.router, prefix="/api/validation", tags=["Validation"])
+app.include_router(agents.router, prefix="/api/agents", tags=["AI Agents"])
 
 @app.get("/")
 def root():
-    return {"message": "ARIC API is running", "version": "1.0.0"}
+    return {"message": "ARIC API is running", "version": "1.0.0", "agents": 4}
 
 @app.get("/health")
 def health():
-    return {"status": "healthy", "agents": 4, "active": True}
+    return {"status": "healthy", "agents": 4, "active": True, "ai_powered": True}

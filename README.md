@@ -1,4 +1,4 @@
-# 🏦 ARIC — Agentic Regulatory Intelligence & Compliance Platform
+# 🏦 ARIC — Agentic Regulatory Intelligence & Compliance Platform Project
 
 <div align="center">
 

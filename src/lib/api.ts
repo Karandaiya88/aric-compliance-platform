@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8000";
+const API_URL = "https://aric-compliance-platform.onrender.com";
 
 export async function getRegulations() {
   const res = await fetch(`${API_URL}/api/regulations/`);

@@ -1,4 +1,4 @@
-const API_URL = "https://aric-compliance-platform.onrender.com";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://aric-compliance-platform.onrender.com";
 
 export async function getRegulations() {
   const res = await fetch(`${API_URL}/api/regulations/`);
